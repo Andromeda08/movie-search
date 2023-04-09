@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  @apply bg-zinc-900 text-white;
+}
+
+h1 {
+  @apply font-bold text-2xl;
+}
+
+h2 {
+  @apply font-semibold text-xl;
+}
+
+h3 {
+  @apply font-semibold text-lg;
+}
+
+h4 {
+  @apply font-semibold;
+}
+
+.layout {
+  @apply mx-auto container py-4 grid gap-4;
+  grid-template-columns: 1fr 2fr;
+
+  & > * {
+    min-width: 0px;
+  }
+}
+
+.spinner {
+  @apply w-full flex items-center justify-center;
+
+  & > * {
+    @apply animate-spin;
+  }
+}
+
+.borderEffect {
+  @apply border rounded-xl transition-colors
+    border-zinc-800
+    hover:border-zinc-700
+}
+
+.badge {
+  @apply
+    px-1.5 py-[3px]
+    rounded-lg
+    bg-zinc-800 text-zinc-300
+    text-sm;
+}
+
+.sidebar {
+  @apply w-full flex flex-col gap-4;
+}
+
+.searchBar {
+  @apply
+    px-3 py-2
+    flex gap-2
+    focus-within:border-zinc-700;
+
+  @extend .borderEffect;
+  
+  & > input[type=text] {
+    @apply bg-transparent w-full outline-none;
+  }
+}
+
+.searchResults {
+  @apply w-full flex flex-col gap-2 p-2;
+  @extend .borderEffect;
+}
+
+.movie {
+  @apply w-full px-3 py-2 flex flex-col gap-1.5;
+  @extend .borderEffect;
+
+  & > .head {
+    @apply flex justify-between gap-2;
+
+    button {
+      @apply truncate;
+
+      .title {
+        @apply truncate;
+
+        span {
+          @apply font-normal text-sm text-zinc-400;
+        }
+      }
+    }
+  }
+
+  & > .genres {
+    @apply flex flex-wrap gap-2;
+  }
+}
+
+.detailsTabs {
+  @apply px-3 py-2 flex justify-evenly;
+  @extend .borderEffect;
+
+  & > button {
+    @apply
+      text-zinc-300 font-medium
+      transition-all
+      hover:underline hover:text-zinc-100;
+
+    &.active {
+      @apply text-white;
+    }
+  }
+}
+
+.movieDetails {
+  & > header {
+    @apply flex gap-4;
+
+    &> .poster {
+      @apply min-w-[160px] overflow-hidden rounded-xl;
+    }
+  }
+}
