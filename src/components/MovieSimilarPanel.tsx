@@ -8,6 +8,7 @@ export const MovieSimilarPanel: React.FC = () => {
 
   return (
     <div className='movieSimilars'>
+      <h1>Movies similar to <span className='text-white font-bold'>{ m!.name }</span></h1>
       <ul className='list'>
         { m?.similar.map((m: Movie) => (<MovieCompact key={m.id} movie={m} />)) }
       </ul>

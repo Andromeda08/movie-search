@@ -24,7 +24,7 @@ h4 {
 }
 
 .layout {
-  @apply mx-auto container py-4 grid gap-4;
+  @apply mx-auto container p-4 flex flex-col md:grid gap-4;
   grid-template-columns: 1fr 2fr;
 
   & > * {
@@ -166,7 +166,14 @@ h4 {
 }
 
 .movieSimilars {
+  & > h1 {
+    @apply text-zinc-300 mb-2;
+  }
+
   .list {
-    @apply grid grid-cols-2 gap-4;
+    @apply
+      grid gap-4
+      grid-cols-1
+      md:grid-cols-2;
   }
 }
