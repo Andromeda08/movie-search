@@ -8,7 +8,7 @@ const SearchBar: React.FC<{ searchFn: any }> = ({ searchFn }) => {
     <form className='searchBar'>
       <input
         type='text'
-        placeholder='Search to find'
+        placeholder='Search to find movies'
         onChange={(e) => { _setFilter(e.target.value )}}
       />
       <button onClick={(e) => { 
