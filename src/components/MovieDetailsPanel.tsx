@@ -48,7 +48,7 @@ export const MovieDetailsPanel: React.FC = () => {
     { m && (
       <header>
         <div className='poster'>
-          <img src={ m.img.url } alt="" />
+          
         </div>
         <div>
           <h1 className='title'>{ m.name }</h1>

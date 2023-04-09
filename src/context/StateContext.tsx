@@ -22,10 +22,11 @@ export interface StateContextData {
 const stateContextDefaults: StateContextData = {
   theme: 'dark',
   setTheme: (t: Theme) => {},
-  toggeTheme: () => {},
+  toggleTheme: () => {},
+  selectedMovie: undefined,
   setSelectedMovie: (m: Movie) => {},
   selectedTab: 'details',
-  setSelectedTab: (t: MovieTabs) => {}
+  setSelectedTab: (t: MovieTab) => {}
 };
 
 const StateContext = createContext<StateContextData>(stateContextDefaults);
