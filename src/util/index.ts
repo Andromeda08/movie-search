@@ -15,7 +15,7 @@ const wikipediaSearchUrl = (query: string, limit: number = 1) => {
 }
 
 const omdbSearchUrl = (query: string) => {
-    const base = new URL('http://www.omdbapi.com/?apikey=e25c3e9e');
+    const base = new URL('https://www.omdbapi.com/?apikey=e25c3e9e');
     base.searchParams.append('t', query);
     return base.toString();
 }
