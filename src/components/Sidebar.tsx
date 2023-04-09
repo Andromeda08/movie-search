@@ -23,7 +23,7 @@ const SEARCH_MOVIES = gql(`
       img: poster {
         url: custom(size: "w185_and_h278_bestv2")
       }
-      similar(limit: 10) {
+      similar(limit: 15) {
         id
         name
         score

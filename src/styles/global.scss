@@ -121,8 +121,52 @@ h4 {
   & > header {
     @apply flex gap-4;
 
-    &> .poster {
-      @apply min-w-[160px] overflow-hidden rounded-xl;
+    & > .poster {
+      @apply min-w-[160px] h-full overflow-hidden rounded-xl;
     }
+
+    & > .details {
+      @apply flex flex-col gap-2;
+      
+      & > .title {
+        @apply flex items-center gap-2;
+
+        span {
+          @apply text-zinc-400;
+        }
+      }
+
+      & > .releaseDate {
+        @apply text-zinc-300 text-sm font-medium;
+      }
+
+      & > .genres {
+        @apply flex flex-wrap gap-2;
+      }
+
+      & > .overview {
+        p {
+          @apply text-zinc-300;
+        }
+      }
+
+      & > .links {
+        @apply flex flex-col gap-1;
+
+        & > li {
+          @apply text-zinc-300 hover:text-zinc-50 transition-colors;
+
+          a {
+            @apply flex items-center gap-1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.movieSimilars {
+  .list {
+    @apply grid grid-cols-2 gap-4;
   }
 }
